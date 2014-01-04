@@ -1,8 +1,10 @@
-<h1>Users</h1>
+<div class="page-header">
+  <h1>Users</h1>
+</div>
 
-<p><%= link_to 'Add a New User', new_user_url %></p>
+<p><%= link_to 'Add a New User', new_user_url, class: 'btn btn-primary' %></p>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>User number</th>
@@ -24,25 +26,25 @@
   </thead>
 
   <tbody>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= user.user_number %></td>
-      <td><%= user.first_name %></td>
-      <td><%= user.last_name %></td>
-      <td><%= user.home_city %></td>
-      <td><%= user.home_state %></td>
-      <td><%= user.home_country %></td>
-      <td><%= user.email %></td>
-      <td><%= user.user_name %></td>
-      <td><%= user.password %></td>
-      <td><%= user.security_question %></td>
-      <td><%= user.security_answer %></td>
-      <td><%= user.photo_link %></td>
-      <td><%= link_to 'Show', user_url(user) %></td>
-      <td><%= link_to 'Edit', edit_user_url(user) %></td>
-      <td><%= link_to 'Destroy', user_url(user), method: 'delete', data: { confirm: "Do you really want to delete this user?" } %></td>
-    </tr>
-  <% end %>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_number %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.home_city %></td>
+        <td><%= user.home_state %></td>
+        <td><%= user.home_country %></td>
+        <td><%= user.email %></td>
+        <td><%= user.user_name %></td>
+        <td><%= user.password %></td>
+        <td><%= user.security_question %></td>
+        <td><%= user.security_answer %></td>
+        <td><%= user.photo_link %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, user_url(user), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_user_url(user), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, user_url(user), method: 'delete', data: { confirm: "Do you really want to delete this user?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 

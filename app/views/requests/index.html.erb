@@ -1,8 +1,10 @@
-<h1>Requests</h1>
+<div class="page-header">
+  <h1>Requests</h1>
+</div>
 
-<p><%= link_to 'Add a New Request', new_request_url %></p>
+<p><%= link_to 'Add a New Request', new_request_url, class: 'btn btn-primary' %></p>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Request number</th>
@@ -33,34 +35,34 @@
   </thead>
 
   <tbody>
-  <% @requests.each do |request| %>
-    <tr>
-      <td><%= request.request_number %></td>
-      <td><%= request.user_number %></td>
-      <td><%= request.created_date %></td>
-      <td><%= request.needed_date %></td>
-      <td><%= request.time_needed %></td>
-      <td><%= request.delivery_city %></td>
-      <td><%= request.delivery_address %></td>
-      <td><%= request.delivery_instructions %></td>
-      <td><%= request.request_text %></td>
-      <td><%= request.underwear_type %></td>
-      <td><%= request.underwear_size %></td>
-      <td><%= request.underwear_color %></td>
-      <td><%= request.underwear_quantity %></td>
-      <td><%= request.undershirt_type %></td>
-      <td><%= request.undershirt_size %></td>
-      <td><%= request.undershirt_color %></td>
-      <td><%= request.undershirt_quantity %></td>
-      <td><%= request.sock_type %></td>
-      <td><%= request.sock_size %></td>
-      <td><%= request.sock_color %></td>
-      <td><%= request.sock_quantity %></td>
-      <td><%= link_to 'Show', request_url(request) %></td>
-      <td><%= link_to 'Edit', edit_request_url(request) %></td>
-      <td><%= link_to 'Destroy', request_url(request), method: 'delete', data: { confirm: "Do you really want to delete this request?" } %></td>
-    </tr>
-  <% end %>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.request_number %></td>
+        <td><%= request.user_number %></td>
+        <td><%= request.created_date %></td>
+        <td><%= request.needed_date %></td>
+        <td><%= request.time_needed %></td>
+        <td><%= request.delivery_city %></td>
+        <td><%= request.delivery_address %></td>
+        <td><%= request.delivery_instructions %></td>
+        <td><%= request.request_text %></td>
+        <td><%= request.underwear_type %></td>
+        <td><%= request.underwear_size %></td>
+        <td><%= request.underwear_color %></td>
+        <td><%= request.underwear_quantity %></td>
+        <td><%= request.undershirt_type %></td>
+        <td><%= request.undershirt_size %></td>
+        <td><%= request.undershirt_color %></td>
+        <td><%= request.undershirt_quantity %></td>
+        <td><%= request.sock_type %></td>
+        <td><%= request.sock_size %></td>
+        <td><%= request.sock_color %></td>
+        <td><%= request.sock_quantity %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, request_url(request), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_request_url(request), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, request_url(request), method: 'delete', data: { confirm: "Do you really want to delete this request?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 

@@ -1,6 +1,27 @@
 Freshunderwear::Application.routes.draw do
+ 
+  root 'homepages#index'
+
+  # Routes for the Homepage resource:
+  # CREATE
+  get '/homepages/new', controller: 'homepages', action: 'new', as: 'new_homepage'
+  post '/homepages', controller: 'homepages', action: 'create', as: 'homepages'
+
+  # READ
+  get '/homepages', controller: 'homepages', action: 'index'
+  get '/homepages/:id', controller: 'homepages', action: 'show', as: 'homepage'
+
+  # UPDATE
+  get '/homepages/:id/edit', controller: 'homepages', action: 'edit', as: 'edit_homepage'
+  patch '/homepages/:id', controller: 'homepages', action: 'update'
+
+  # DELETE
+  delete '/homepages/:id', controller: 'homepages', action: 'destroy'
+  #------------------------------
+
   # Routes for the Request resource:
   # CREATE
+
   get '/requests/new', controller: 'requests', action: 'new', as: 'new_request'
   post '/requests', controller: 'requests', action: 'create', as: 'requests'
 

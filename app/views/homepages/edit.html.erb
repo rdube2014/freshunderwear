@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h1>Editing Homepage #<%= @homepage.id %></h1>
+</div>
+
+<%= form_tag(homepage_url(@homepage), method: 'patch', class: 'form-horizontal') do %>
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-6">
+      <%= submit_tag "Update Homepage", class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
