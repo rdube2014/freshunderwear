@@ -1,0 +1,66 @@
+<h1>Requests</h1>
+
+<p><%= link_to 'Add a New Request', new_request_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request number</th>
+      <th>User number</th>
+      <th>Created date</th>
+      <th>Needed date</th>
+      <th>Time needed</th>
+      <th>Delivery city</th>
+      <th>Delivery address</th>
+      <th>Delivery instructions</th>
+      <th>Request text</th>
+      <th>Underwear type</th>
+      <th>Underwear size</th>
+      <th>Underwear color</th>
+      <th>Underwear quantity</th>
+      <th>Undershirt type</th>
+      <th>Undershirt size</th>
+      <th>Undershirt color</th>
+      <th>Undershirt quantity</th>
+      <th>Sock type</th>
+      <th>Sock size</th>
+      <th>Sock color</th>
+      <th>Sock quantity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @requests.each do |request| %>
+    <tr>
+      <td><%= request.request_number %></td>
+      <td><%= request.user_number %></td>
+      <td><%= request.created_date %></td>
+      <td><%= request.needed_date %></td>
+      <td><%= request.time_needed %></td>
+      <td><%= request.delivery_city %></td>
+      <td><%= request.delivery_address %></td>
+      <td><%= request.delivery_instructions %></td>
+      <td><%= request.request_text %></td>
+      <td><%= request.underwear_type %></td>
+      <td><%= request.underwear_size %></td>
+      <td><%= request.underwear_color %></td>
+      <td><%= request.underwear_quantity %></td>
+      <td><%= request.undershirt_type %></td>
+      <td><%= request.undershirt_size %></td>
+      <td><%= request.undershirt_color %></td>
+      <td><%= request.undershirt_quantity %></td>
+      <td><%= request.sock_type %></td>
+      <td><%= request.sock_size %></td>
+      <td><%= request.sock_color %></td>
+      <td><%= request.sock_quantity %></td>
+      <td><%= link_to 'Show', request_url(request) %></td>
+      <td><%= link_to 'Edit', edit_request_url(request) %></td>
+      <td><%= link_to 'Destroy', request_url(request), method: 'delete', data: { confirm: "Do you really want to delete this request?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

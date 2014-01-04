@@ -1,0 +1,67 @@
+<h1>New User</h1>
+
+<%= form_tag(users_url, method: 'post') do %>
+  <div>
+    <%= label_tag :user_number %><br />
+    <%= number_field_tag :user_number %>
+  </div>
+
+  <div>
+    <%= label_tag :first_name %><br />
+    <%= text_field_tag :first_name %>
+  </div>
+
+  <div>
+    <%= label_tag :last_name %><br />
+    <%= text_field_tag :last_name %>
+  </div>
+
+  <div>
+    <%= label_tag :home_city %><br />
+    <%= text_field_tag :home_city %>
+  </div>
+
+  <div>
+    <%= label_tag :home_state %><br />
+    <%= text_field_tag :home_state %>
+  </div>
+
+  <div>
+    <%= label_tag :home_country %><br />
+    <%= text_field_tag :home_country %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email %>
+  </div>
+
+  <div>
+    <%= label_tag :user_name %><br />
+    <%= text_field_tag :user_name %>
+  </div>
+
+  <div>
+    <%= label_tag :password %><br />
+    <%= text_field_tag :password %>
+  </div>
+
+  <div>
+    <%= label_tag :security_question %><br />
+    <%= text_field_tag :security_question %>
+  </div>
+
+  <div>
+    <%= label_tag :security_answer %><br />
+    <%= text_field_tag :security_answer %>
+  </div>
+
+  <div>
+    <%= label_tag :photo_link %><br />
+    <%= text_field_tag :photo_link %>
+  </div>
+
+  <div>
+    <%= submit_tag "Create User" %>
+  </div>
+<% end %>

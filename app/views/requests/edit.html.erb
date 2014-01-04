@@ -1,0 +1,112 @@
+<h1>Editing Request #<%= @request.id %></h1>
+
+<%= form_tag(request_url(@request), method: 'patch') do %>
+  <div>
+    <%= label_tag :request_number %><br />
+    <%= number_field_tag :request_number, @request.request_number %>
+  </div>
+
+  <div>
+    <%= label_tag :user_number %><br />
+    <%= number_field_tag :user_number, @request.user_number %>
+  </div>
+
+  <div>
+    <%= label_tag :created_date %><br />
+    <%= text_field_tag :created_date, @request.created_date %>
+  </div>
+
+  <div>
+    <%= label_tag :needed_date %><br />
+    <%= text_field_tag :needed_date, @request.needed_date %>
+  </div>
+
+  <div>
+    <%= label_tag :time_needed %><br />
+    <%= text_field_tag :time_needed, @request.time_needed %>
+  </div>
+
+  <div>
+    <%= label_tag :delivery_city %><br />
+    <%= text_field_tag :delivery_city, @request.delivery_city %>
+  </div>
+
+  <div>
+    <%= label_tag :delivery_address %><br />
+    <%= text_field_tag :delivery_address, @request.delivery_address %>
+  </div>
+
+  <div>
+    <%= label_tag :delivery_instructions %><br />
+    <%= text_area_tag :delivery_instructions, @request.delivery_instructions %>
+  </div>
+
+  <div>
+    <%= label_tag :request_text %><br />
+    <%= text_area_tag :request_text, @request.request_text %>
+  </div>
+
+  <div>
+    <%= label_tag :underwear_type %><br />
+    <%= text_field_tag :underwear_type, @request.underwear_type %>
+  </div>
+
+  <div>
+    <%= label_tag :underwear_size %><br />
+    <%= text_field_tag :underwear_size, @request.underwear_size %>
+  </div>
+
+  <div>
+    <%= label_tag :underwear_color %><br />
+    <%= text_field_tag :underwear_color, @request.underwear_color %>
+  </div>
+
+  <div>
+    <%= label_tag :underwear_quantity %><br />
+    <%= number_field_tag :underwear_quantity, @request.underwear_quantity %>
+  </div>
+
+  <div>
+    <%= label_tag :undershirt_type %><br />
+    <%= text_field_tag :undershirt_type, @request.undershirt_type %>
+  </div>
+
+  <div>
+    <%= label_tag :undershirt_size %><br />
+    <%= text_field_tag :undershirt_size, @request.undershirt_size %>
+  </div>
+
+  <div>
+    <%= label_tag :undershirt_color %><br />
+    <%= text_field_tag :undershirt_color, @request.undershirt_color %>
+  </div>
+
+  <div>
+    <%= label_tag :undershirt_quantity %><br />
+    <%= text_field_tag :undershirt_quantity, @request.undershirt_quantity %>
+  </div>
+
+  <div>
+    <%= label_tag :sock_type %><br />
+    <%= text_field_tag :sock_type, @request.sock_type %>
+  </div>
+
+  <div>
+    <%= label_tag :sock_size %><br />
+    <%= text_field_tag :sock_size, @request.sock_size %>
+  </div>
+
+  <div>
+    <%= label_tag :sock_color %><br />
+    <%= text_field_tag :sock_color, @request.sock_color %>
+  </div>
+
+  <div>
+    <%= label_tag :sock_quantity %><br />
+    <%= text_field_tag :sock_quantity, @request.sock_quantity %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Request" %>
+  </div>
+<% end %>
