@@ -2,25 +2,13 @@
   <h1>About fresh-underwear.com</h1>
 </div>
 
-<p><%= link_to 'Add a New Homepage', new_homepage_url, class: 'btn btn-primary' %></p>
+<p>At freshunderwear.com, we promise to deliver the freshest and cleanest underwear to your doorstep during times of your most urgent need.</p>
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <ul>On a long business trip and haven't had a chance to stop at the laundromat? - Check.</ul>
+  <ul>Travelling home for the holidays at your in-laws, but your luggage was lost? - We got you covered.</ul>
+  <ul>Just feeling lazy and need some new undies? - We'll hook you up.</ul>
 
-  <tbody>
-    <% @homepages.each do |homepage| %>
-      <tr>
-        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, homepage_url(homepage), class: 'btn btn-primary' %></td>
-        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_homepage_url(homepage), class: 'btn btn-warning' %></td>
-        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, homepage_url(homepage), method: 'delete', data: { confirm: "Do you really want to delete this homepage?" }, class: 'btn btn-danger' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<p>Whatever your underwear needs are, freshunderwear.com has your back!  Create an account to get started.</p>
+
+<p><%= link_to 'Create an Account', new_user_url, class: 'btn btn-primary' %></p>
 
