@@ -1,152 +1,138 @@
 <div class="page-header">
-  <h1>New Request</h1>
+  <h1>New Underwear Request!</h1>
 </div>
 
 <%= form_tag(requests_url, method: 'post', class: 'form-horizontal') do %>
+  
   <div class="form-group">
-    <%= label_tag :request_number, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= number_field_tag :request_number, nil, class: 'form-control' %>
+    <div class="col-md-4">
+      <%= hidden_field_tag :created_at, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :user_number, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= number_field_tag :user_number, nil, class: 'form-control' %>
+    <%= label_tag :needed_date, "Desired Delivery Date", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
+      <%= date_field_tag :needed_date, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :created_date, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= text_field_tag :created_date, nil, class: 'form-control' %>
+    <%= label_tag :time_needed, "Desired Delivery Time", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
+      <%= time_field_tag :time_needed, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :needed_date, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= text_field_tag :needed_date, nil, class: 'form-control' %>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= label_tag :time_needed, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= text_field_tag :time_needed, nil, class: 'form-control' %>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= label_tag :delivery_city, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :delivery_city, "Delivery City", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :delivery_city, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :delivery_address, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :delivery_address, "Delivery Address", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :delivery_address, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :delivery_instructions, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :delivery_instructions, "Delivery Instructions", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_area_tag :delivery_instructions, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :request_text, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :request_text, "Request Text", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_area_tag :request_text, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :underwear_type, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :underwear_type, "Underwear Type", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :underwear_type, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :underwear_size, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :underwear_size, "Underwear Size", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :underwear_size, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :underwear_color, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :underwear_color, "Underwear Color", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :underwear_color, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :underwear_quantity, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :underwear_quantity, "Underwear Quantity", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= number_field_tag :underwear_quantity, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :undershirt_type, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :undershirt_type, "Undershirt Type", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :undershirt_type, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :undershirt_size, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :undershirt_size, "Undershirt Size", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :undershirt_size, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :undershirt_color, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :undershirt_color, "Undershirt Color", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :undershirt_color, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :undershirt_quantity, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= text_field_tag :undershirt_quantity, nil, class: 'form-control' %>
+    <%= label_tag :undershirt_quantity, "Undershirt Quantity", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
+      <%= number_field_tag :undershirt_quantity, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :sock_type, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :sock_type, "Sock Type", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :sock_type, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :sock_size, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :sock_size, "Sock Size", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :sock_size, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :sock_color, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
+    <%= label_tag :sock_color, "Sock Color", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
       <%= text_field_tag :sock_color, nil, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= label_tag :sock_quantity, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= text_field_tag :sock_quantity, nil, class: 'form-control' %>
+    <%= label_tag :sock_quantity, "Sock Quantity", class: 'col-md-2 control-label' %>
+    <div class="col-md-4">
+      <%= number_field_tag :sock_quantity, nil, class: 'form-control' %>
     </div>
   </div>
 

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140104175315) do
   create_table "requests", force: true do |t|
     t.integer "request_number"
     t.integer "user_number"
-    t.date    "created_date"
+    t.date    "created_at"
     t.date    "needed_date"
     t.time    "time_needed"
     t.string  "delivery_city"
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 20140104175315) do
     t.string  "undershirt_type"
     t.string  "undershirt_size"
     t.string  "undershirt_color"
-    t.string  "undershirt_quantity"
+    t.integer  "undershirt_quantity"
     t.string  "sock_type"
     t.string  "sock_size"
     t.string  "sock_color"
-    t.string  "sock_quantity"
+    t.integer  "sock_quantity"
   end
 
   create_table "users", force: true do |t|
