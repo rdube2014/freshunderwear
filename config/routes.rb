@@ -1,5 +1,6 @@
 Freshunderwear::Application.routes.draw do
  
+  devise_for :users
   root 'homepages#index'
 
   # Routes for the Homepage resource:

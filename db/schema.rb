@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104175315) do
+ActiveRecord::Schema.define(version: 20140109045123) do
 
   create_table "homepages", force: true do |t|
   end
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140104175315) do
   create_table "requests", force: true do |t|
     t.integer "request_number"
     t.integer "user_number"
-    t.date    "created_at"
+    t.date    "created_date"
     t.date    "needed_date"
     t.time    "time_needed"
     t.string  "delivery_city"
@@ -33,26 +33,37 @@ ActiveRecord::Schema.define(version: 20140104175315) do
     t.string  "undershirt_type"
     t.string  "undershirt_size"
     t.string  "undershirt_color"
-    t.integer  "undershirt_quantity"
+    t.string  "undershirt_quantity"
     t.string  "sock_type"
     t.string  "sock_size"
     t.string  "sock_color"
-    t.integer  "sock_quantity"
+    t.string  "sock_quantity"
   end
 
   create_table "users", force: true do |t|
-    t.integer "user_number"
-    t.string  "first_name"
-    t.string  "last_name"
-    t.string  "home_city"
-    t.string  "home_state"
-    t.string  "home_country"
-    t.string  "email"
-    t.string  "user_name"
-    t.string  "password"
-    t.string  "security_question"
-    t.string  "security_answer"
-    t.string  "photo_link"
+    t.integer  "user_number"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "home_city"
+    t.string   "home_state"
+    t.string   "home_country"
+    t.string   "email"
+    t.string   "user_name"
+    t.string   "password"
+    t.string   "security_question"
+    t.string   "security_answer"
+    t.string   "photo_link"
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
+
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
