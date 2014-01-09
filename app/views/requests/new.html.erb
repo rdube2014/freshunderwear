@@ -55,21 +55,34 @@
   <div class="form-group">
     <%= label_tag :underwear_type, "Underwear Type", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :underwear_type, nil, class: 'form-control' %>
+       <select <%= text_field_tag :underwear_type, nil, class: 'form-control' %>
+        <option value="Boxers">Boxers</option>
+        <option value="Briefs">Briefs</option>
+        <option value="Boxer-Briefs">Boxer-Briefs</option>
+      </select>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :underwear_size, "Underwear Size", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :underwear_size, nil, class: 'form-control' %>
+      <select <%= text_field_tag :underwear_size, nil, class: 'form-control' %>
+        <option value="Small 28-30">Small 28-30</option>
+        <option value="Medium 32-34">Medium 32-34</option>
+        <option value="Large 36-38">Large 36-38</option>
+        <option value="Extra Large 40-42">Extra Large 40-42</option>
+       </select>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :underwear_color, "Underwear Color", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :underwear_color, nil, class: 'form-control' %>
+       <select <%= text_field_tag :underwear_color, nil, class: 'form-control' %>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Grey">Grey</option>
+      </select>
     </div>
   </div>
 
@@ -83,21 +96,32 @@
   <div class="form-group">
     <%= label_tag :undershirt_type, "Undershirt Type", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :undershirt_type, nil, class: 'form-control' %>
+    <select <%= text_field_tag :undershirt_type, nil, class: 'form-control' %>
+        <option value="Crew">Crew</option>
+        <option value="V-Neck">V-Neck</option>
+      </select>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :undershirt_size, "Undershirt Size", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :undershirt_size, nil, class: 'form-control' %>
+      <select <%= text_field_tag :undershirt_size, nil, class: 'form-control' %>
+        <option value="Small">Smallk</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="Extra Large">Extra Large</option>
+      </select>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :undershirt_color, "Undershirt Color", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :undershirt_color, nil, class: 'form-control' %>
+    <select <%= text_field_tag :undershirt_color, nil, class: 'form-control' %>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+      </select>
     </div>
   </div>
 
@@ -111,21 +135,34 @@
   <div class="form-group">
     <%= label_tag :sock_type, "Sock Type", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :sock_type, nil, class: 'form-control' %>
-    </div>
+      <select <%= text_field_tag :sock_type, nil, class: 'form-control' %>
+        <option value="Dress">Dress</option>
+        <option value="Casual Ankle">Casual Ankle</option>
+        <option value="Casual Regular">Casual Regular</option>
+        <option value="Casual High-Top">Casual High-Top</option>
+      </select>
+     </div> 
   </div>
 
   <div class="form-group">
     <%= label_tag :sock_size, "Sock Size", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :sock_size, nil, class: 'form-control' %>
+     <select <%= text_field_tag :sock_size, nil, class: 'form-control' %>
+        <option value="Small">Smallk</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="Extra Large">Extra Large</option>
+      </select>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :sock_color, "Sock Color", class: 'col-md-2 control-label' %>
     <div class="col-md-4">
-      <%= text_field_tag :sock_color, nil, class: 'form-control' %>
+      <select <%= text_field_tag :sock_color, nil, class: 'form-control' %>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+      </select>
     </div>
   </div>
 
